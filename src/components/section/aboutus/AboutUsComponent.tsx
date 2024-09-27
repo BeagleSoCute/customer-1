@@ -3,7 +3,7 @@ import AboutUsContents from "./AboutUsContents";
 const AboutUsComponent = () => {
   return (
     <div>
-      <h1 className="text-center font-bold mb-[63px] text-[36px]">
+      <h1 className="text-center font-bold mb-[63px]">
         Professional Tile Installation with Over 10 Years of Experience
       </h1>
       <AboutUsContents />
