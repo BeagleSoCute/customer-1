@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 //Components
 import Menu from "@/components/layout/menu/Menu";
+import CoverImg from "@/components/layout/cover/CoverImg";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Menu/>
+        <CoverImg/>
         {children}
       </body>
     </html>
