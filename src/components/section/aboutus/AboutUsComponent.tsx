@@ -1,5 +1,5 @@
+//Components
 import AboutUsContents from "./AboutUsContents";
-
 const AboutUsComponent = () => {
   return (
     <div>
