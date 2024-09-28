@@ -31,17 +31,18 @@ const AboutUsContents = () => {
             right, every time.
           </p>
           <div className=" flex md:justify-start justify-center ">
-          <button className="button-global-style md:mt-[41px] mt-[5px] bg-white text-black ">
-            Join With Us
-          </button>
+            <button className="button-global-style md:mt-[41px] mt-[5px] bg-white text-black ">
+              Join With Us
+            </button>
           </div>
-      
         </div>
       </div>
-      <div className="flex justify-center mt-[80px] gap-x-[66px]">
-        {cardContents.map((item) => (
-          <CardContent data={item} />
-        ))}
+      <div className=" w-full text-center ">
+        <div className="md:flex md:justify-center inline-block items-center mt-[80px] gap-x-[66px]">
+          {cardContents.map((item) => (
+            <CardContent data={item} />
+          ))}
+        </div>
       </div>
     </>
   );
