@@ -33,7 +33,7 @@ h1 {
   font-size: 36px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1000px) {
   h1 {
     font-size: 18px;
   }
