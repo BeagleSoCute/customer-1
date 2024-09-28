@@ -1,4 +1,4 @@
-import aboutusImg from "@/app/assets/images/aboutusSection.svg";
+import aboutusImg from "./assets/aboutusSection.svg";
 import Image from "next/image";
 import { cardContents } from "./contentData";
 import CardContent from "./CardContent";
@@ -16,7 +16,7 @@ const AboutUsContents = () => {
           />
         </div>
         <div
-          className="bg-blue-500 md:h-[450px] md:w-[488px] h-[260px] w-[250px] md:py-[50px] md:px-[40px] p-6 text-white absolute 
+          className="bg-blue-500 lg:h-[450px] lg:w-[488px] md:h-[330px] md:w-[450px]  h-[260px] w-[250px] lg:py-[50px] md:py-[30px] lg:px-[40px] md:px-[20px] p-6 text-white absolute 
         md:right-[50px] md:top-[80px] top-[70px]"
         >
           <h1>About us</h1>

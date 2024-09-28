@@ -1,7 +1,7 @@
 //Icons
-import bestDesignIcon from "@/app/assets/icons/bestDesign.svg";
-import bestServiceIcon from "@/app/assets/icons/bestService.svg";
-import bestTeamIcon from "@/app/assets/icons/bestTeam.svg";
+import bestDesignIcon from "./assets/bestDesign.svg";
+import bestServiceIcon from "./assets/bestService.svg";
+import bestTeamIcon from "./assets/bestTeam.svg";
 
 export const cardContents = [
   {

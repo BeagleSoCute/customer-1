@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import logo1 from "@/app/assets/logo/logo.jpg";
-import logo2 from "@/app/assets/logo/logo2.svg";
-import menu from "@/app/assets/icons/menu.png";
+import logo1 from "./assets/logo.jpg";
+import logo2 from "./assets/logo2.svg";
+import menu from "./assets/menu.png";
 import Image from "next/image";
 import { Dropdown } from "antd";
 const Menu = () => {
