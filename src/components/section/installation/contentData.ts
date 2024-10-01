@@ -1,3 +1,4 @@
+import {propsDataTypes} from "./type"
 //Icons
 import bathRoom from "./assets/bathroom.svg"
 import entryway from "./assets/entryway.svg"
@@ -5,7 +6,7 @@ import kitchen from "./assets/kitchen.svg"
 import laundry from "./assets/laundry.svg"
 import other from "./assets/other.svg"
 
-export const cardContents = [
+export const cardContents:propsDataTypes[] = [
   {
     key: 1,
     icon: kitchen,
