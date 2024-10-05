@@ -5,7 +5,7 @@ import CardContent from "./CardContent";
 
 const AboutUsContents = () => {
   return (
-    <>
+    <div>
       <div className="flex justify-center relative w-full">
         <div className="relative md:w-9/12 md:h-[667px] w-full h-[450px]">
           <Image
@@ -44,7 +44,7 @@ const AboutUsContents = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

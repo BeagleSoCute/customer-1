@@ -1,6 +1,6 @@
 import { cardContents } from "./contentData";
 import { propsDataTypes } from "./type";
-
+import SectionContainerHOC from "@/components/container/SectionContainerHOC";
 import CardContent from "./CardContent";
 const InstallSectionContainer = () => {
   const data = cardContents.reduce(
@@ -15,7 +15,7 @@ const InstallSectionContainer = () => {
     { primary: [], other: [] }
   );
   return (
-    <div className="bg-[#F6F8F7] md:p-[64px] px-[12px] py-[23px]">
+          <SectionContainerHOC additionalStyles="bg-[#F6F8F7]">
       <h1 className="text-center font-bold md:mb-[64px] mb-[23px] ">
         Tile Installation Services
       </h1>
@@ -33,8 +33,9 @@ const InstallSectionContainer = () => {
           </div>
         ))}
       </div>
-    </div>
-  );
+      </SectionContainerHOC>
+
+);
 };
 
 export default InstallSectionContainer;
