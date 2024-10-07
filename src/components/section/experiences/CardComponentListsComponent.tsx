@@ -51,7 +51,8 @@ const CardComponent = ({
 const CardComponentLists = () => {
   return (
     <div className="relative">
-      <div className="absolute xl:top-[-20px] xl:right-[0px] lg:top-[150px] lg:right-[0px] md:top-[120px] md:right-[240px] top-[120px] right-[140px]">
+      <div className="absolute xl:top-[-20px] xl:right-[0px] lg:top-[150px] lg:right-[0px] md:top-[120px] md:right-[240px] sm:right-[220px] 
+      top-[120px] right-[150px]">
         <div className="absolute z-10 xl:top-[100px] xl:right-[120px] lg:top-[100px] lg:right-[150px]  right-[-130px] ">
           <CardComponent
             className="xl:w-[300px] md:w-[200px] w-[140px] "
@@ -62,7 +63,7 @@ const CardComponentLists = () => {
         </div>
         <div
           className="absolute xl:top-[220px] xl:right-[340px] lg:top-[190px] lg:right-[270px] md:top-[50px] md:right-[-40px] 
-        top-[40px] right-[-70px]
+        top-[40px] right-[-100px]
         "
         >
           <CardComponent
