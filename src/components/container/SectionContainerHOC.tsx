@@ -6,7 +6,7 @@ type propTypes = {
 }
 
 const SectionContainerHOC: FC<propTypes> = ({ children, additionalStyles }) => {
-  return <div className={`md:p-[64px] px-[12px] py-[23px] w-full ${additionalStyles}`}>{children}</div>;
+  return <div className={`lg:p-[64px] md:p-[32px] p-[24px] px-[12px] py-[23px] w-full ${additionalStyles}`}>{children}</div>;
 };
 
 
