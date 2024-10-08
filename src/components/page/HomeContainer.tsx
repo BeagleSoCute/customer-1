@@ -2,6 +2,7 @@
 import AboutUsComponent from "@/components/section/aboutus/AboutUsContainer";
 import InstallSectionContainer from "../section/installation/InstallSectionContainer";
 import ExperienceContainer from "../section/experiences/ExperienceContainer";
+import ContactContainer from "../section/contact/ContactContainer";
 const HomeContainer = () => {
   return (
     <div>
@@ -11,10 +12,11 @@ const HomeContainer = () => {
       <div className="mt-[64px]">
         <InstallSectionContainer />
       </div>
-      <div className="ms-[64px]">
+      <div>
         <ExperienceContainer />
       </div>
-      <div className="ms-[64px] h-[5000px]">
+      <div className=" h-[5000px]">
+        <ContactContainer/>
       </div>
     </div>
   );

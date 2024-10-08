@@ -25,8 +25,35 @@ body {
   color: var(--blue-theme);
 }
 .blue-btn {
-  color:#ffffff;
+  color: #ffffff;
   background-color: var(--blue-theme);
+}
+
+.contact-container-img {
+  position: relative;
+  width: 100%;
+  background: url("../components/section/contact/assets/bgPic.JPG");
+  background-size:100%; /* Ensure the image is fully visible */  
+  background-position: 50% 65%; /* Adjust vertical position to 40% */
+  background-repeat: no-repeat;
+  overflow: hidden; /* Prevent overflow */
+
+}
+
+.contact-container-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.795); /* This darkens the image */
+  z-index: 1;
+}
+
+.contact-container-img * {
+  position: relative;
+  z-index: 2; /* Ensures content appears above the dark overlay */
 }
 
 @layer utilities {
@@ -45,6 +72,9 @@ h1 {
 @media (max-width: 1000px) {
   h1 {
     font-size: 18px;
+  }
+  h2{
+    font-size: 16px;
   }
   p {
     font-size: 12px;
