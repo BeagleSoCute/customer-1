@@ -13,7 +13,7 @@ export type projectTypes = {
 export const projectLists:projectTypes[] = [
   {
     id: 1,
-    title:'Test',
+    title:'kitchen',
     type: "kitchen",
     address: "21 Whitaker palce 1010 Auckland",
     details: "Fix bath room, Do a lot of thing, cleaning, checking, fixing",
@@ -37,8 +37,24 @@ export const projectLists:projectTypes[] = [
   },
   {
     id: 4,
-    title:'Test',
+    title:'kitchen',
     type: "kitchen",
+    address: "21 Whitaker palce 1010 Auckland",
+    details: "Fix bath room, Do a lot of thing, cleaning, checking, fixing",
+    photo: [example1]
+  },
+  {
+    id: 5,
+    title:'kitchen',
+    type: "kitchen",
+    address: "21 Whitaker palce 1010 Auckland",
+    details: "Fix bath room, Do a lot of thing, cleaning, checking, fixing",
+    photo: [example1]
+  },
+  {
+    id: 6,
+    title:'bathroom',
+    type: "bathroom",
     address: "21 Whitaker palce 1010 Auckland",
     details: "Fix bath room, Do a lot of thing, cleaning, checking, fixing",
     photo: [example1]
