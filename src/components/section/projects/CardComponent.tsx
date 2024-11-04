@@ -8,10 +8,10 @@ const CardComponent = ({ projectDetails }: propsType) => {
   return (
     <div className="w-full bg-yellow-500 text-white">
       <Image className="w-" src={projectDetails.photo[0]} alt="project-img" />
-      <div className="p-2">
+      {/* <div className="p-2">
       <h1 className="text-[20px] font-bold –700">{projectDetails.title}</h1>
       <p>{projectDetails.address}</p>
-      </div>
+      </div> */}
 
     </div>
   );
