@@ -1,27 +1,73 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import SectionContainerHOC from "@/components/container/SectionContainerHOC";
 import { projectLists, projectTypes } from "@/app/data/projectData";
 import CardComponent from "./CardComponent";
 import { upperTheFirstChar } from "@/helper/common.helper";
+type tabListTypes = "all" | "kitchen" | "bathroom";
 const ProjectContainer = () => {
-  const lists = ["all", "kitchen", "bathroom"];
-  const [activeName, setActiveName] = useState("all");
-  const defaultProject = projectLists.slice(0, 4);
+  const tablists: tabListTypes[] = ["all", "kitchen", "bathroom"];
+  const [activeName, setActiveName] = useState<tabListTypes>("all");
+  const defaultProject = useMemo(() => projectLists.slice(0, 4), []);
+  const totalPage = projectLists.length / 4;
   const [displayProjects, setDisplayProjects] =
     useState<projectTypes[]>(defaultProject);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const handleSelectType = (status: string) => {
-    setActiveName(status);
-    if (status === "all") {
+  const handleSetDisplay = (tabName: tabListTypes) => {
+    const filteredProjects = projectLists
+      .filter((item: projectTypes) => item.type === tabName)
+      .slice(0, 4);
+    setDisplayProjects(filteredProjects);
+  };
+  const handleSelectType = (tabName: tabListTypes) => {
+    setActiveName(tabName);
+    setCurrentPage(1);
+    if (tabName === "all") {
       setDisplayProjects(defaultProject);
     } else {
-      const filteredProjects = projectLists
-        .filter((item: projectTypes) => item.type === status)
-        .slice(0, 4);
-      console.log("filteredProjects", filteredProjects);
-      setDisplayProjects(filteredProjects);
+      handleSetDisplay(tabName);
     }
+  };
+  const handleActionNext = (projectInterval = 0) => {
+    let filteredProjects = projectLists;
+    if (activeName !== "all") {
+      filteredProjects = projectLists.filter(
+        (item: projectTypes) => item.type === activeName
+      );
+    }
+    const firstItem = projectInterval - 4;
+    filteredProjects = filteredProjects.slice(firstItem, projectInterval);
+    setDisplayProjects(filteredProjects);
+  };
+  const handleSelectNextInterval = () => {
+    let thisPage = currentPage + 1;
+    if (thisPage > totalPage) {
+      thisPage = 1;
+    }
+    const projectInterval = thisPage * 4;
+    handleActionNext(projectInterval);
+    setCurrentPage(thisPage);
+  };
+  const handleActionPrevious = (projectInterval = 0) => {
+    let filteredProjects = projectLists;
+    if (activeName !== "all") {
+      filteredProjects = projectLists.filter(
+        (item: projectTypes) => item.type === activeName
+      );
+    }
+    const firstItem = projectInterval - 4;
+    filteredProjects = filteredProjects.slice(firstItem, projectInterval);
+    setDisplayProjects(filteredProjects);
+  };
+  const handleSelectPreviousInterval = () => {
+    let thisPage = currentPage - 1;
+    if (thisPage === 0) {
+      thisPage = totalPage;
+    }
+    const projectInterval = thisPage * 4;
+    handleActionPrevious(projectInterval);
+    setCurrentPage(thisPage);
   };
   return (
     <SectionContainerHOC>
@@ -30,7 +76,7 @@ const ProjectContainer = () => {
           <h1 className="lg:text-[48px]">Projects</h1>
 
           <div>
-            {lists.map((item: string, index: number) => (
+            {tablists.map((item: tabListTypes, index: number) => (
               <p
                 key={index}
                 onClick={() => handleSelectType(item)}
@@ -55,6 +101,20 @@ const ProjectContainer = () => {
                 <CardComponent projectDetails={item} />
               </div>
             ))}
+          </div>
+          <div className="flex justify-between mt-[32px] text-white">
+            <button
+              onClick={handleSelectPreviousInterval}
+              className="bg-[#292E3D]  h-[44px] w-[265px]"
+            >
+              Back
+            </button>
+            <button
+              onClick={handleSelectNextInterval}
+              className="bg-[#292E3D] h-[44px]  w-[265px]"
+            >
+              Next
+            </button>
           </div>
         </div>
       </div>
