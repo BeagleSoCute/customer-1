@@ -4,23 +4,19 @@ import InstallSectionContainer from "../section/installation/InstallSectionConta
 import ExperienceContainer from "../section/experiences/ExperienceContainer";
 import ContactContainer from "../section/contact/ContactContainer";
 import ProjectContainer from "../section/projects/ProjectContainer";
+import EmailForm from "../section/emailForm/EmailFormContainer";
 const HomeContainer = () => {
   return (
     <div>
-      <div>
-        <AboutUsComponent />
-      </div>
+      <AboutUsComponent />
       <div className="mt-[64px]">
         <InstallSectionContainer />
       </div>
-      <div>
-        <ExperienceContainer />
-      </div>
-      <div>
-        <ContactContainer />
-      </div>
+      <ExperienceContainer />
+      <ContactContainer />
+      <ProjectContainer />
       <div className=" h-[5000px]">
-        <ProjectContainer />
+        <EmailForm />
       </div>
     </div>
   );
