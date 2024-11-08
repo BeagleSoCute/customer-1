@@ -40,7 +40,7 @@ const EmailForm = () => {
         <Image src={linkedin} alt="linkedin" />
         <Image src={twitter} alt="twitter" />
         </div>
-        <p className="w-[580px] mx-auto mt-[36px]">No matter the project, our experienced team is here to provide top-notch tile installation services you can trust</p>
+        <p className="lg:w-[580px] mx-auto mt-[36px]">No matter the project, our experienced team is here to provide top-notch tile installation services you can trust</p>
       <InputForm />
       </div>
     </SectionContainerHOC>
