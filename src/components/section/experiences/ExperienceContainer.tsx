@@ -1,5 +1,7 @@
 import SectionContainerHOC from "@/components/container/SectionContainerHOC";
 import CardComponentListsComponent from "./CardComponentListsComponent";
+import JoinButton from "../../share/JoinButton";
+
 const ExperienceContainer = () => {
   return (
     <SectionContainerHOC>
@@ -32,9 +34,7 @@ const ExperienceContainer = () => {
             </p>
           </div>
           <div className="flex justify-end">
-            <button className="button-global-style md:mt-[41px] mt-[15px] bg-white text-black blue-btn ">
-              Join With Us
-            </button>
+            <JoinButton className="button-global-style md:mt-[41px] mt-[15px] bg-white text-black blue-btn " />
           </div>
         </div>
       </div>

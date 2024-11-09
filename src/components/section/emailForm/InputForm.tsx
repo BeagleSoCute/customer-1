@@ -9,7 +9,7 @@ interface FormData {
 const InputForm = () => {
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
-  const handleSubmit = (data: FormData) => {
+  const handleSubmit = async (data: FormData) => {
     const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID
       ? process.env.NEXT_PUBLIC_SERVICE_ID
       : "";
@@ -20,8 +20,8 @@ const InputForm = () => {
       ? process.env.NEXT_PUBLIC_PUBLIC_KEY
       : "";
     setLoading(true);
-    emailjs
-      .send(serviceID, templateID, data , {
+    await emailjs
+      .send(serviceID, templateID, data, {
         publicKey,
       })
       .then(

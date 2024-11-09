@@ -2,7 +2,7 @@ import aboutusImg from "./assets/aboutusSection.svg";
 import Image from "next/image";
 import { cardContents } from "./contentData";
 import CardContent from "./CardContent";
-
+import JoinButton from "../../share/JoinButton"
 const AboutUsContents = () => {
   return (
     <div>
@@ -31,9 +31,7 @@ const AboutUsContents = () => {
             right, every time.
           </p>
           <div className=" flex md:justify-start justify-center ">
-            <button className="button-global-style md:mt-[41px] mt-[5px] bg-white text-black ">
-              Join With Us
-            </button>
+            <JoinButton className='button-global-style md:mt-[41px] mt-[5px] bg-white text-black'/>
           </div>
         </div>
       </div>
