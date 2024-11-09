@@ -33,22 +33,6 @@ export const projectLists: projectTypes[] = [
     photo: ["/assets/kitchen/kitchen3.JPG"],
   },
   {
-    id: 'k-4',
-    title: "kitchen4",
-    type: "kitchen",
-    address: "21 Whitaker palce 1010 Auckland",
-    details: "Fix bath room, Do a lot of thing, cleaning, checking, fixing",
-    photo: ["/assets/kitchen/kitchen4.JPG"],
-  },
-  {
-    id: 'k-5',
-    title: "kitchen5",
-    type: "kitchen",
-    address: "21 Whitaker palce 1010 Auckland",
-    details: "Fix bath room, Do a lot of thing, cleaning, checking, fixing",
-    photo: ["/assets/kitchen/kitchen4.JPG"],
-  },
-  {
     id: 'b-1',
     title: "bathroom1",
     type: "bathroom",
@@ -79,6 +63,14 @@ export const projectLists: projectTypes[] = [
     address: "21 Whitaker palce 1010 Auckland",
     details: "Fix bath room, Do a lot of thing, cleaning, checking, fixing",
     photo: ["/assets/bathroom/bathroom4.JPG"],
+  },
+  {
+    id: 'b-17',
+    title: "bathroom2",
+    type: "bathroom",
+    address: "21 Whitaker palce 1010 Auckland",
+    details: "Fix bath room, Do a lot of thing, cleaning, checking, fixing",
+    photo: ["/assets/bathroom/bathroom17.JPG"],
   },
   {
     id: 'b-5',
@@ -175,5 +167,13 @@ export const projectLists: projectTypes[] = [
     address: "21 Whitaker palce 1010 Auckland",
     details: "Fix bath room, Do a lot of thing, cleaning, checking, fixing",
     photo: ["/assets/bathroom/bathroom16.JPG"],
+  },
+  {
+    id: 'b-18',
+    title: "bathroom2",
+    type: "bathroom",
+    address: "21 Whitaker palce 1010 Auckland",
+    details: "Fix bath room, Do a lot of thing, cleaning, checking, fixing",
+    photo: ["/assets/bathroom/bathroom18.JPG"],
   },
 ];
