@@ -39,8 +39,8 @@ const AboutUsContents = () => {
       </div>
       <div className=" w-full text-center px-5">
         <div className="md:flex md:justify-center  inline-block items-center md:mt-[60px] mt-[30px] gap-x-[66px]">
-          {cardContents.map((item) => (
-            <CardContent data={item} />
+          {cardContents.map((item,index) => (
+            <CardContent key={index} data={item} />
           ))}
         </div>
       </div>

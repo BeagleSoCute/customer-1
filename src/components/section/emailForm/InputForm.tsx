@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import { Form, Input, notification, Button } from "antd";
 import emailjs from "@emailjs/browser";
-import { useForm } from "antd/es/form/Form";
 
+interface FormData {
+  [key: string]: string;
+}
 const InputForm = () => {
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
-  const handleSubmit = (data: any) => {
+  const handleSubmit = (data: FormData) => {
     const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID
       ? process.env.NEXT_PUBLIC_SERVICE_ID
       : "";
@@ -19,7 +21,7 @@ const InputForm = () => {
       : "";
     setLoading(true);
     emailjs
-      .send(serviceID, templateID, data, {
+      .send(serviceID, templateID, data , {
         publicKey,
       })
       .then(
