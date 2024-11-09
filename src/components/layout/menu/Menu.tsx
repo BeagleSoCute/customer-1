@@ -1,25 +1,24 @@
 "use client";
-import { useState } from "react";
 import logo1 from "./assets/logo.jpg";
 import logo2 from "./assets/logo2.svg";
 import menu from "./assets/menu.png";
 import Image from "next/image";
 import { Dropdown } from "antd";
+import { useRouter } from "next/navigation";
 const Menu = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to manage dropdown visibility
-
-  const toggleDropdown = () => {
-    setIsOpen((prev) => !prev);
-  };
-
+  const router = useRouter();
   const items = [
-    { key: 1, label: "Home" },
-    { key: 1, label: "About Us" },
-    { key: 1, label: "Services" },
-    { key: 1, label: "Project" },
-    { key: 1, label: "Gallery" },
-    { key: 1, label: "Contact Us" },
+    { key: 1, label: "Home", path: "/" },
+    { key: 2, label: "About Us", path: "/about" },
+    { key: 3, label: "Services", path: "/services" },
+    { key: 4, label: "Project", path: "/project" },
+    { key: 5, label: "Gallery", path: "/gallery" },
+    { key: 6, label: "Contact Us", path: "/contact" },
   ];
+
+  const handleNavigation = (path: string) => {
+    router.push(path);
+  };
 
   return (
     <div className="flex justify-between w-full h-20 sm:px-6 px-4">
@@ -29,19 +28,37 @@ const Menu = () => {
       </div>
       {/* Mobile Menu Button */}
       <div className="lg:hidden my-auto">
-        <Dropdown menu={{ items }} placement="bottomLeft">
-          <Image className="h-6 w-6" src={menu} alt="logo" />
+        <Dropdown
+          menu={{
+            items: items.map((item) => ({
+              key: item.key,
+              label: (
+                <p
+                  onClick={() => handleNavigation(item.path)}
+                  className="cursor-pointer"
+                >
+                  {item.label}
+                </p>
+              ),
+            })),
+          }}
+          placement="bottomLeft"
+        >
+          <Image className="h-6 w-6" src={menu} alt="menu" />
         </Dropdown>
       </div>
 
       {/* Desktop Menu */}
       <div className="hidden lg:flex items-center lg:gap-16 md:gap-5 mr-16">
-        <p className="cursor-pointer">Home</p>
-        <p className="cursor-pointer">About Us</p>
-        <p className="cursor-pointer">Services</p>
-        <p className="cursor-pointer">Project</p>
-        <p className="cursor-pointer">Gallery</p>
-        <p className="cursor-pointer">Contact Us</p>
+        {items.map((item) => (
+          <p
+            key={item.key}
+            onClick={() => handleNavigation(item.path)}
+            className="cursor-pointer"
+          >
+            {item.label}
+          </p>
+        ))}
       </div>
     </div>
   );

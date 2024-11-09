@@ -4,8 +4,11 @@ import SectionContainerHOC from "@/components/container/SectionContainerHOC";
 import { projectLists, projectTypes } from "@/app/data/projectData";
 import CardComponent from "./CardComponent";
 import { upperTheFirstChar } from "@/helper/common.helper";
+import { useRouter } from "next/navigation";
+
 type tabListTypes = "all" | "kitchen" | "bathroom";
 const ProjectContainer = () => {
+  const router = useRouter()
   const tablists: tabListTypes[] = ["all", "kitchen", "bathroom"];
   const [activeName, setActiveName] = useState<tabListTypes>("all");
   const defaultProject = useMemo(() => projectLists.slice(0, 4), []);
@@ -74,7 +77,7 @@ const ProjectContainer = () => {
   return (
     <SectionContainerHOC>
       <div className="grid grid-cols-12">
-        <div id="project-section" className="md:col-span-5 col-span-4">
+        <div id="project-section" className="md:col-span-4 col-span-4">
           <h1 className="lg:text-[48px]">Projects</h1>
 
           <div>
@@ -92,11 +95,11 @@ const ProjectContainer = () => {
               </p>
             ))}
           </div>
-          <button className="bg-[#389BD4] md:px-[20px] sm:px-[8px] px-[2px]  md:py-[11px]  sm:-py[5px] py-[2spx]  ">
+          <button onClick={()=> router.push('/gallery')} className="bg-[#389BD4] md:px-[20px] sm:px-[8px] px-[2px]  md:py-[11px]  sm:-py[5px] py-[2spx]  ">
             <p className="text-white">SEE ALL PROJECT</p>
           </button>
         </div>
-        <div id="project-contents" className="md:col-span-6 col-span-8">
+        <div id="project-contents" className="md:col-span-8 col-span-8">
           <div className="grid grid-cols-2 sm:gap-6 gap-2">
             {displayProjects.map((item: projectTypes, index: number) => (
               <div key={index} className="col-span-1">
