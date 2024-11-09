@@ -26,7 +26,7 @@ const InstallSectionContainer = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center md:gap-x-[66px] gap-x-[16px] md:mt-[48px] mt-[20px]">
+      <div className="flex justify-center md:gap-x-[66px] gap-x-[4px] md:mt-[48px] mt-[20px]">
         {data.other.map((item, index) => (
           <div key={index} className="h-[220px] w-[271px]">
             <CardContent data={item} />

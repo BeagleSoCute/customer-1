@@ -63,7 +63,7 @@ const CardComponentLists = () => {
         </div>
         <div
           className="absolute xl:top-[220px] xl:right-[340px] lg:top-[190px] lg:right-[270px] md:top-[50px] md:right-[-40px] 
-        top-[40px] right-[-100px]
+        top-[40px] right-[-120px]
         "
         >
           <CardComponent
@@ -87,7 +87,7 @@ const CardComponentLists = () => {
 
         <div
           className="absolute xl:top-[540px] xl:right-[320px] lg:top-[380px] lg:right-[250px] md:top-[220px] md:right-[-80px]
-      top-[140px] right-[-90px]
+      top-[140px] right-[-110px]
       "
         >
           <CardComponent

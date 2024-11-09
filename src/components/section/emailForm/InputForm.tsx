@@ -44,6 +44,8 @@ const InputForm = () => {
   };
   const alertMsg = "This field can not be empty!";
   const requireRule = { required: true, message: alertMsg };
+  const formItemGridCol =
+    "lg:col-span-6  md:col-span-6 col-span-12 ";
   return (
     <Form
       form={form}
@@ -51,8 +53,12 @@ const InputForm = () => {
       layout="vertical"
       className="ant-form"
     >
-      <div className="grid m-auto my-[30px] md:grid-cols-2 grid-cols-1  lg:w-[70%] w-[100%] gap-[25px]">
-        <Form.Item name="name" rules={[requireRule]}>
+      <div className="grid m-auto my-[30px] grid-cols-12  lg:w-[70%] w-[100%] gap-[25px]">
+        <Form.Item
+          className={formItemGridCol}
+          name="name"
+          rules={[requireRule]}
+        >
           <Input
             disabled={loading}
             maxLength={100}
@@ -61,6 +67,7 @@ const InputForm = () => {
           />
         </Form.Item>
         <Form.Item
+          className={formItemGridCol}
           name="email"
           rules={[
             requireRule,
@@ -75,7 +82,11 @@ const InputForm = () => {
           />
         </Form.Item>
 
-        <Form.Item name="reason" rules={[requireRule]}>
+        <Form.Item
+          className={formItemGridCol}
+          name="reason"
+          rules={[requireRule]}
+        >
           <Input
             disabled={loading}
             maxLength={100}
@@ -83,7 +94,11 @@ const InputForm = () => {
             placeholder="Reason for Contacting"
           />
         </Form.Item>
-        <Form.Item name="phone" rules={[requireRule]}>
+        <Form.Item
+          className={formItemGridCol}
+          name="phone"
+          rules={[requireRule]}
+        >
           <Input
             disabled={loading}
             maxLength={100}
@@ -91,7 +106,7 @@ const InputForm = () => {
             placeholder="Phone"
           />
         </Form.Item>
-        <Form.Item className="col-span-2" name="message" rules={[requireRule]}>
+        <Form.Item className="col-span-12" name="message" rules={[requireRule]}>
           <Input.TextArea
             disabled={loading}
             style={{ height: "150px", width: "100%" }}

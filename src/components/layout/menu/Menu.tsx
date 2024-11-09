@@ -5,7 +5,7 @@ import menu from "./assets/menu.png";
 import Image from "next/image";
 import { Dropdown } from "antd";
 import { useRouter } from "next/navigation";
-import { usePathname } from "next/navigation"; // For detecting current path
+import { usePathname } from "next/navigation";
 
 const Menu = () => {
   const router = useRouter();

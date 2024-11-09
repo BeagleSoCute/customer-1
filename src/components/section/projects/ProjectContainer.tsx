@@ -79,7 +79,6 @@ const ProjectContainer = () => {
       <div className="grid grid-cols-12">
         <div id="project-section" className="md:col-span-4 col-span-4">
           <h1 className="lg:text-[48px]">Projects</h1>
-
           <div>
             {tablists.map((item: tabListTypes, index: number) => (
               <p
