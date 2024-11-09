@@ -62,7 +62,7 @@ const CardComponentLists = () => {
           />
         </div>
         <div
-          className="absolute xl:top-[220px] xl:right-[340px] lg:top-[190px] lg:right-[270px] md:top-[50px] md:right-[-40px] 
+          className="absolute xl:top-[220px] xl:right-[300px] lg:top-[190px] lg:right-[270px] md:top-[50px] md:right-[-40px] 
         top-[40px] right-[-120px]
         "
         >
