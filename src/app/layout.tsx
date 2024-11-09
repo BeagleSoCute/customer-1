@@ -4,7 +4,7 @@ import "./globals.css";
 //Components
 import Menu from "@/components/layout/menu/Menu";
 import CoverImg from "@/components/layout/cover/CoverImg";
-
+import Footer from "@/components/layout/footer/Footer";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -34,6 +34,7 @@ export default function RootLayout({
         <Menu/>
         <CoverImg/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

@@ -8,14 +8,22 @@ import EmailForm from "../section/emailForm/EmailFormContainer";
 const HomeContainer = () => {
   return (
     <div>
-      <AboutUsComponent />
-      <div className="mt-[64px]">
+      <div id="about-us">
+        <AboutUsComponent />
+      </div>
+      <div id="service" className="mt-[64px]">
         <InstallSectionContainer />
       </div>
-      <ExperienceContainer />
-      <ContactContainer />
-      <ProjectContainer />
-      <div className=" h-[5000px]">
+      <div id="experience">
+        <ExperienceContainer />
+      </div>
+      <div id="contact">
+        <ContactContainer />
+      </div>
+      <div id="project">
+        <ProjectContainer />
+      </div>
+      <div id="email">
         <EmailForm />
       </div>
     </div>

@@ -7,7 +7,7 @@ const AboutUsComponent = () => {
         Professional Tile Installation with Over 10 Years of Experience
       </h1>
       <div className="py-[16px]">
-      <AboutUsContents />
+        <AboutUsContents />
       </div>
     </div>
   );

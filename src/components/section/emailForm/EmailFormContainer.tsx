@@ -15,7 +15,7 @@ import twitter from "./assets/twitter.svg"
 const EmailForm = () => {
 
   return (
-    <SectionContainerHOC>
+    <SectionContainerHOC additionalStyles="bg-[#F6F8F7]">
       <div className="text-[#292E3D] text-center">
         <div>
           <h2 className="text-[32px]">

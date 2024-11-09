@@ -5,21 +5,35 @@ import menu from "./assets/menu.png";
 import Image from "next/image";
 import { Dropdown } from "antd";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation"; // For detecting current path
+
 const Menu = () => {
   const router = useRouter();
+  const pathname = usePathname();
+
   const items = [
     { key: 1, label: "Home", path: "/" },
-    { key: 2, label: "About Us", path: "/about" },
-    { key: 3, label: "Services", path: "/services" },
-    { key: 4, label: "Project", path: "/project" },
+    { key: 2, label: "About Us", path: "#about-us" },
+    { key: 3, label: "Services", path: "#service" },
+    { key: 4, label: "Project", path: "#project" },
     { key: 5, label: "Gallery", path: "/gallery" },
-    { key: 6, label: "Contact Us", path: "/contact" },
+    { key: 6, label: "Contact Us", path: "#email" },
   ];
-
   const handleNavigation = (path: string) => {
-    router.push(path);
+    if (pathname === "/" && path.startsWith("/#")) {
+      // If already on the home page, scroll directly to the section
+      const sectionId = path.split("#")[1];
+      const sectionElement = document.getElementById(sectionId);
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if(path !== '/gallery') {
+      // Navigate to the home page with a hash for scrolling
+      router.push('/'+path);
+    }else{
+      router.push(path)
+    }
   };
-
   return (
     <div className="flex justify-between w-full h-20 sm:px-6 px-4">
       <div className="flex items-center sm:gap-6 ">
