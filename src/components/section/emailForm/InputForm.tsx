@@ -28,7 +28,7 @@ const InputForm = () => {
         () => {
           console.log("SUCCESS!");
           notification.success({
-            message: "Email has been sent",
+            message: "Email has been sent. We will contact you soon.",
           });
           form.resetFields();
         },
