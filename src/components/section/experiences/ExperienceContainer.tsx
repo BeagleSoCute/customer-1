@@ -1,7 +1,4 @@
-import SectionContainerHOC from "@/components/container/SectionContainerHOC";
-import CardComponentListsComponent from "./CardComponentListsComponent";
 import JoinButton from "../../share/JoinButton";
-import Image from "next/image";
 const ExperienceContainer = () => {
   return (
     <div className="pt-[32px]">
