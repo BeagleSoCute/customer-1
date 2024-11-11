@@ -11,11 +11,11 @@ const HomeContainer = () => {
       <div id="about-us">
         <AboutUsComponent />
       </div>
-      <div id="service" className="mt-[64px]">
-        <InstallSectionContainer />
-      </div>
       <div id="experience">
         <ExperienceContainer />
+      </div>
+      <div id="service">
+        <InstallSectionContainer />
       </div>
       <div id="contact">
         <ContactContainer />
